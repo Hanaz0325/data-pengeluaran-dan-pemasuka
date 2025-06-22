@@ -157,8 +157,9 @@ function formatJumlah(input) {
       const tanggal = document.getElementById("tanggal").value;
       const keterangan = document.getElementById("keterangan").value.trim();
       const jenis = document.getElementById("jenis").value;
-      const jumlah = parseInt(document.getElementById("jumlah").value);
-
+      const rawJumlah = document.getElementById("jumlah").value.replace(/\./g, '');
+const jumlah = parseInt(rawJumlah);
+      
       if (!tanggal || !keterangan || isNaN(jumlah)) {
         alert("Lengkapi semua kolom!");
         return;
